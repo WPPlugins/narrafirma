@@ -1,0 +1,951 @@
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ All pages ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* NOTE: the mnemonic for margin or padding order is TROUBLE: Top Right Bottom Left */
+
+/* A CSS stylesheet is like a GUI control system for twidling with widget options */
+
+/* html, body, pleaseWaitOverlay - are in survey.css */
+
+/* the NarraFirma color palette is (going darker from left to right)
+
+Gray - [extra: e4e4e4] - d3d2d2 - a7a5a5 - 3e3739 - 231f20
+Brown - e7ddd0 - cfbba2 - b5731e - 895717
+Green - e0e6cc - b2c07f - 8db500 - 658200
+Orange - f4e0cc - eac199 - ff7d00 - [extra: e0a266] - cc6400
+Blue - d5dae6 - abb6ce - [extra: 7b8cb2] - 3b5fab - 2e4a85
+
+*/
+
+#pageDiv {
+   padding-left: 10px;
+   padding-top: 3em;
+}
+
+a:link {
+	color: #658200;
+}
+
+a:visited {
+	color: #3b5fab;
+}
+
+a:hover {
+	color: #2e4a85;
+}
+
+a:active {
+	color: #3b5fab;
+}
+
+textarea, input, select { /* override because expanded in survey */
+	margin-top: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navigation bar ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#navigationDiv {
+	background-color: #b2c07f;
+	padding: 0.25em 0em 0.2em 0em;
+    border-bottom: 4px solid #8db500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 2em;
+}
+
+#narrafirma-name {
+    margin-left: 0.5em; 
+    margin-right: 0.5em; 
+    padding: 8px;
+}
+
+.narrafirma-serverstatus-ok {
+	color: #231f20;
+	font-weight: 700;
+	text-shadow: 2px 2px #d3d2d2;
+	border: 2px solid #b2c07f; /* so the name doesn't shift when the red border appears */
+}
+
+.narrafirma-serverstatus-waiting {
+	color: #231f20;
+	font-weight: 700;
+	text-shadow: 2px 2px yellow;
+	border: 2px solid #b2c07f; /* so the name doesn't shift when the red border appears */
+}
+
+.narrafirma-serverstatus-waiting-last-error {
+	color: #231f20;
+	border: 2px solid red;
+	font-weight: 700;
+	text-shadow: 2px 2px yellow;
+}
+
+.narrafirma-serverstatus-failure {
+	color: #231f20;
+	border: 2px solid red;
+	font-weight: 700;
+	text-shadow: 2px 2px red;
+}
+
+.narrafirma-serverstatus-unknown {
+	color: black;
+}
+
+button {
+    background-color: #BCD8F4;
+    background-image: linear-gradient(#FFF 0px, rgba(255, 255, 255, 0) 3px, rgba(255, 255, 255, 0.75) 100%);
+    margin: 2px 4px 2px 4px;
+    padding: 2px 4px 2px 4px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.button-text {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px 4px 2px 4px;
+}
+
+.wwsButtonImage {
+	background-image: url(../images/WWS_BookCover_front_tiny.png);
+    background-repeat: no-repeat;
+	width: 43px;
+	height: 60px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.homeButtonImage {
+	/* display: block; */
+    background-image: url(../images/ionicicons/home.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.leftButtonImage {
+    /* display: block; */
+    background-image: url(../images/ionicicons/arrow-left-a.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.rightButtonImage {
+    /* display: block; */
+    background-image: url(../images/ionicicons/arrow-right-a.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    /* Next line may not work correctly in IE6 & IE7? Also does not work right in safari 5.1 with button a bit high. https://bugs.dojotoolkit.org/ticket/5170 */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#narrafirma-help-link, #narrafirma-next-page, #narrafirma-previous-page, #narrafirma-version {
+    padding-right: 16px;
+    float: right;
+    font-size: 0.9em;
+}
+
+#narrafirma-read-only {
+    padding-left: 16px;
+    float: right;
+    font-size: 0.9em;
+    color: red;
+}
+
+#narrafirma-next-page.narrafirma-link-disabled,  #narrafirma-previous-page.narrafirma-link-disabled {
+    color: black;
+}
+
+#narrafirma-logout-link, #narrafirma-login-link {
+    float: right;
+    font-size: 0.9em;
+}
+
+#narafirma-breadcrumbs {
+    font-size: 0.9em;
+}
+
+#narrafirma-breadcrumb-current {
+
+}
+
+.narrafirma-page-name {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+ 
+ 
+.narrafirma-page-change-button {
+    font-size: 1em;
+    min-width: 10em;
+    height: 2em;
+    border-radius: 12px; 
+    border: none;
+    box-shadow: 2px 2px 2px #3e3739;
+    margin-bottom: 0.5em;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Dashboard ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.narrafirma-pni-phases-image {
+    float: left;
+	margin: 4px 30px 10px 0px;
+	padding-right: 30px;
+    border-right: 2px solid #8db500;
+}
+
+.narrafirma-dashboardStatusButton {
+    font-size: 1em;
+    min-width: 10em;
+    height: 2em;
+    border-radius: 12px; 
+    border: none;
+    box-shadow: 2px 2px 2px #3e3739;
+    margin-bottom: 0.5em;
+}
+
+.narrafirma-dashboardSectionStatusDisplayCompletion {
+    margin-left: 1.0em;
+}
+
+.narrafirma-dashboard-story-collection-status table {
+	border-collapse: collapse;
+	}
+
+.narrafirma-dashboard-story-collection-status th {
+	font-weight: normal;
+	border: 1px solid #3e3739;
+	padding: 4px;
+	}
+
+.narrafirma-dashboard-story-collection-status td {
+	border: 1px solid #3e3739;
+	padding: 4px;
+	}
+
+.narrafirma-dashboard-header {
+	display: block;
+	font-weight: 700;
+	margin-bottom: 0.7em;
+}
+
+.narrafirma-dashboard-page-link {
+	display: block;
+	margin-left: 1em;
+}
+
+.narrafirma-questionAnswer { /* this is now used to display the reminder on the phase dashboard page */
+    background-color: #e0e6cc;
+    border: 1px solid #b2c07f;
+    margin: 0.5em 0 0 1em;
+    padding: 0.5em;
+}
+
+.narrafirma-questionAnswer:empty { /* if no reminder entered, do not show */
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	background-color: #fff;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages with entry fields ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.questionExternal.narrafirma-question-type-header {
+	display: block;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: #abb6ce;  
+    border-radius: 12px; 
+	margin-bottom: 12px;
+	margin-top: 10px;
+}
+
+.narrafirma-griditempanel-editing .narrafirma-question-type-header.questionExternal { 
+	background-color: #7b8cb2;
+}
+ 
+.narrafirma-griditempanel-viewing .narrafirma-question-type-header.questionExternal {
+	background-color: #a7a5a5;
+}
+ 
+.questionExternal {
+	background-color: #d5dae6;
+	margin-bottom: 4px;
+    border-radius: 12px;
+    padding: 4px 8px 4px 8px;
+    margin: 4px;
+}
+
+.questionExternal-annotation {
+	background-color: #b2c07f;
+	margin-bottom: 4px;
+    border-radius: 12px;
+    padding: 8px;
+    margin: 8px;
+}
+
+.questionExternal.narrafirma-question-type-text.narrafirma-ignore-story {
+	background-color: #a7a5a5;
+}
+
+.questionInternal.narrafirma-question-type-slider {
+    text-align: center;
+}
+
+.questionExternal.narrafirma-question-type-label {
+    background-color: white;
+    margin-bottom: 4px;
+    border-radius: 12px;
+}
+
+.htmlWidget, .narrafirma-image {
+    margin-bottom: 4px;
+    border-radius: 12px;
+    padding: 8px;
+    margin: 8px; 
+}
+
+.questionPrompt {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: block;
+}
+
+.questionInternal {
+    padding: 8px;
+    margin-left: 12px;
+}
+
+.narrafirma-textbox {
+	width: 100%;
+}
+
+.questionExternal.narrafirma-question-type-questionAnswer {
+    background-color: white;
+}
+
+form {
+   padding-left: 0.7em;
+}
+
+.narrafirma-reminder {
+	background-color: #b2c07f;
+	border-radius: 12px;
+}
+
+.narrafirma-griditem-form {
+	width: 800px;
+	height: 800px;
+	overflow: auto;
+}
+
+.narrafirma-griditempanel-hidden {
+    display: none;
+}
+
+.narrafirma-griditempanel-editing {
+	background-color: #FFF;
+	margin: 1em;
+	border: 1px solid #2e4a85;
+	border-radius: 12px;
+	padding: 8px;
+}
+
+.narrafirma-griditempanel-editing .questionExternal {
+	background-color: #abb6ce;
+}
+
+.narrafirma-griditempanel-viewing {
+	background-color: #e4e4e4; /* this gray is an extra super light gray */
+	margin: 1em;
+	border: 1px solid #231f20;
+	border-radius: 12px;
+	padding: 8px;
+}
+
+.narrafirma-griditempanel-viewing .questionExternal {
+	background-color: #e4e4e4;
+	margin: 0px;
+}
+
+/* hides "copy from template" button when viewing grid item */
+.narrafirma-griditempanel-viewing .narrafirma-template-button {
+	display: none;
+}
+
+.narrafirma-special-warning {
+	display: block;
+	background-color: #eac199;
+	border: 2px solid #cc6400;
+	padding: 10px;
+	margin-left: 5em;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Story card display ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.storyCard table {
+	margin: 0.5em 0 0.5em 0;
+}
+
+.storyCard td {
+	padding: 0.25em 1em 0 0;
+}
+
+.storyCard hr {
+	color: gray;
+}
+
+.narrafirma-story-card-story-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.5em 0 0 0;
+}
+
+.narrafirma-story-card-story-text-in-story-browser {
+	border: 1px solid black;
+	border-radius: 12px; 
+	padding: 10px;
+	margin: 10px;
+}
+
+.narrafirma-story-card-story-text-in-printed-story-cards {
+	margin: 1em 2em 1em 2em;
+}
+
+.narrafirma-story-card-eliciting-question {
+    font-size: 1em;
+}
+
+.narrafirma-story-card-question {
+	margin: 0 0 0.25em 0;
+}
+
+.narrafirma-story-card-field-name {
+	font-size: 1em;
+}
+
+.narrafirma-story-card-eliciting-question-name {
+	font-size: 1em;
+}
+
+.narrafirma-story-card-select-selected, .narrafirma-story-card-checkboxes-selected, .narrafirma-story-card-radiobuttons-selected {
+    font-size: 1.5em;
+    font-weight: bold; 
+}
+
+.narrafirma-story-card-select-unselected, .narrafirma-story-card-checkboxes-unselected, .narrafirma-story-card-radiobuttons-unselected {
+    font-size: 0.75em;
+}
+
+.narrafirma-story-card-slider-name {
+}
+
+.narrafirma-story-card-slider-label-left {
+    font-size: 0.85em;
+    text-align: right;
+}
+
+.narrafirma-story-card-slider-label-right {
+    font-size: 0.85em;
+    text-align: left;
+}
+
+.narrafirma-story-card-slider-contents {
+    padding: 1em;
+}
+
+.narrafirma-story-card-annotations {
+	font-size: 1em;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Adjustments for particular pages ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.narrafirma-page_reviewIncomingStories .questionInternal {
+	padding-top: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Recommendations table ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.recommendationsTable th, .recommendationsTable td {
+	border: 1px solid black;
+	text-align: left;
+	padding: 0.2em 0.2em 0.2em 0.3em;
+}
+
+.narrafirma-dialog-launching-button {
+	margin-bottom: 10px;
+}
+
+.wwsRecommendationsTable-valueCell {
+	font-weight: normal;
+}
+
+.wwsRecommendationsTable-labelCell {
+  font-weight: normal;
+}
+
+.recommendationHigh {
+    background-color: #8db500;
+}
+
+.recommendationMedium {
+    background-color: #b2c07f;
+}
+
+.recommendationLow {
+    background-color: #d3d2d2;
+}
+
+.recommendationNo {
+    background-color: #3e3739;
+    color: white;
+}
+
+.interventions .recommendationLow {
+    background-color: #d3d2d2;
+}
+
+
+.narrafirma-statistics-panel-header {
+	margin: 0.5em 0 0.5em 0;
+	font-weight: 700;
+}
+
+.narrafirma-statistics-panel {
+	background-color: #e0e6cc;
+	border: 1px solid #8db500;
+	padding: 6px;
+	margin: 6px 4px 0 0;
+	font-size: 0.9em;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Catalysis report ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.narrafirma-catalysis-report-title {
+	font-size: 2.5em;
+	font-weight: 700;
+	margin: 0.5em 0 0.1em 0;
+}
+
+.narrafirma-catalysis-report-project-name {
+}
+
+.narrafirma-catalysis-report-date {
+}
+
+.narrafirma-catalysis-report-intro-note {
+	margin: 1em 0 1em 0;
+}
+
+.narrafirma-catalysis-report-perspective-link-header {
+	font-size: 1.25em;
+	margin: 1em 0 0.5em 0;
+}
+
+.narrafirma-catalysis-report-perspective-link {
+	margin: 0 0 0 1em;
+}
+
+.narrafirma-catalysis-report-perspective {
+	font-size: 2em;
+	font-weight: 700;
+	margin-bottom: 0.5em;
+	border-bottom: 2px solid #658200;
+	border-top: 2px solid #658200;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.narrafirma-catalysis-report-interp-link-header {
+	margin-bottom: 0.5em;
+	font-style: italic;
+}
+
+.narrafirma-catalysis-report-interp-link {
+	margin: 0 0 0 1em;
+	font-style: italic;
+}
+
+.narrafirma-catalysis-report-perspective-notes {
+	margin: 1em 0 1em 0;
+}
+
+.narrafirma-catalysis-report-interpretation {
+	font-size: 1.5em;
+	font-weight: 700;
+	font-style: italic;
+	border-bottom: 1px solid #2e4a85;
+}
+
+.narrafirma-catalysis-report-interpretation-notes {
+	margin: 1em 0 1em 0;
+	font-style: italic;
+}
+
+.narrafirma-catalysis-report-observation {
+	font-size: 1.em;
+	font-weight: 700;
+}
+
+.narrafirma-catalysis-report-observation-description {
+	margin: 1em 0 1em 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ d3 charting ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* 
+Gray - [extra: e4e4e4] - d3d2d2 - a7a5a5 - 3e3739 - 231f20
+Brown - e7ddd0 - cfbba2 - b5731e - 895717
+Green - e0e6cc - b2c07f - 8db500 - 658200
+Orange - f4e0cc - eac199 - ff7d00 - [extra: e0a266] - cc6400
+Blue - d5dae6 - abb6ce - [extra: 7b8cb2] - 3b5fab - 2e4a85
+*/
+
+.narrafirma-graph-results-pane {
+	width: 850px;
+	margin: 5px auto 0px auto;
+}
+
+.chartBackground {
+	width: 700px;
+    fill: none;
+}
+
+.chartBodyBackground {
+    fill: none;
+}
+
+.chart {
+	background-color: white;
+}
+
+.bar {
+  fill: none;
+}
+
+.x-axis {
+	fill: none;
+	stroke: #231f20;
+	stroke-width: 1px;
+	shape-rendering: crispEdges;	
+}
+
+.y-axis {
+	fill: none;
+	stroke: #231f20;
+	stroke-width: 1px;
+	shape-rendering: crispEdges;	
+}
+
+.x-axis text {
+	fill: #231f20;
+	stroke-width: 0.5px;
+	font-family: sans-serif;
+	font-size: 1em;
+}
+
+.y-axis text {
+	fill: #231f20;
+	stroke-width: 0.5px;
+	font-family: sans-serif;
+	font-size: 1em;
+}
+
+.x-axis-label {
+	fill: #231f20;
+	stroke-width: 0.5px;
+	font-family: sans-serif;
+	font-size: 1.1em;
+}
+
+.y-axis-label {
+	fill: #231f20;
+	stroke-width: 0.5px;
+	font-family: sans-serif;
+	font-size: 1.1em;
+}
+
+.story.even {
+  fill: #2e4a85;
+}
+
+.story.odd {
+  fill: #7b8cb2;
+}
+
+.story.even.selected {
+  fill: #e0a266;
+}
+
+.story.odd.selected {
+  fill: #cc6400;
+}
+
+.brush .extent {
+  fill-opacity: 0.3;
+  fill: #ff7d00;
+  stroke: #cc6400;
+  stroke-width: 1px;
+  shape-rendering: auto; /* was crispEdges; auto turns on anti-aliasing */
+}
+
+.histogram-mean {
+	stroke: red;
+	stroke-width: 2px;
+}
+
+.histogram-standard-deviation-low {
+	stroke: #8db500;
+	stroke-width: 1.5px;
+}
+
+.histogram-standard-deviation-high {
+	stroke: #8db500;	
+	stroke-width: 1.5px;
+}
+
+.scatterPlot .story {
+  stroke: #2e4a85;
+  stroke-width: 0.2px;
+  fill: #2e4a85;
+  fill-opacity: 0.7;
+}
+
+.scatterPlot .story.selected {
+  stroke: #cc6400;
+  fill: #cc6400;
+}
+
+.contingencyChart .storyCluster.observed {
+  stroke-width: 3px;
+  stroke: #2e4a85;
+  fill: #d5dae6;
+}
+
+.contingencyChart .storyCluster.observed.selected {
+  stroke-width: 2px;
+  stroke: #cc6400;
+  fill: #e0a266;
+}
+
+.contingencyChart .expected {
+  stroke-width: 1px;
+  stroke: #8e8789;
+  stroke-dasharray: "5,5";
+  fill: none;
+}
+
+.contingencyChart .axis path {
+  display: none;
+}
+
+.contingencyChart .axis line {
+  shape-rendering: crispEdges;
+  stroke: gray;
+}
+
+.narrafirma-pattern-browser-selected-stories-header {
+	margin-left: 10px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Mithril grid ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.narrafirma-grid {
+    margin: 10px;
+}
+
+table.scrolling {
+  margin: 10px;
+  display: block;
+  max-height: 400px;
+  overflow-y: scroll;
+  border-collapse: collapse;
+}
+
+table.scrolling th {
+	background-color: #7b8cb2;
+	padding: 10px;
+	border: 1px solid #3e3739;
+}
+
+table.scrolling td {
+    padding: 6px;
+    border: 1px solid #3e3739;
+    height: 1em;
+}
+
+table button.fader {
+    opacity: 1;
+    overflow: auto;
+}
+
+table.scrolling tr {
+	border: 1px solid #3e3739;
+}
+
+table tr:hover button.fader {
+    opacity: 1;
+}
+
+table.scrolling tr:hover {
+    outline: 4px solid;
+}
+
+.narrafirma-grid-row-unselected-odd {
+	background-color: #d5dae6;
+}
+
+.narrafirma-grid-row-unselected-even {
+	background-color: #abb6ce;
+}
+
+.narrafirma-grid-row-selected-odd {
+	background-color: #f4e0cc;
+}
+
+.narrafirma-grid-row-selected-even {
+	background-color: #eac199;
+}
+
+.narrafirma-button-panel {
+    padding: 10px;
+}
+
+.narrafirma-button-panel button {
+    font-size: 1em;
+    height: 2em;
+    border-radius: 12px; 
+    border: none;
+    box-shadow: 2px 2px 2px #3e3739;
+    margin-bottom: 0.5em;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Story browser ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+table.filterTable {
+    width: 100%;
+}
+
+table.filterTable td {
+    width: 50%;
+}
+
+.narrafirma-story-browser-filtered-stories-count {
+	margin: 6px 0 0 12px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Stories list ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.narrafirma-stories-list table {
+  margin: 10px;
+  display: block;
+  max-height: 400px;
+  overflow-y: scroll;
+  border-collapse: collapse;
+}
+
+.narrafirma-stories-list th {
+	background-color: #7b8cb2;
+	padding: 10px;
+	border: 1px solid #3e3739;
+}
+
+.narrafirma-stories-list td {
+    padding: 6px;
+    border: 1px solid #3e3739;
+    height: 1em;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Dialogs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* derived from http://www.cssscript.com/minimal-modal-window-with-plain-javascript/ */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 10000;
+}
+
+.modal-content {
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  min-height: 400px;
+  max-height: 650px;
+  margin: 5% auto 0;
+  background-color: #fff;
+  overflow: auto;
+  z-index: 10001;
+}
+
+.modal-content.wide {
+  max-width: 95%;
+}
+
+.modal-internal {
+    overflow: auto;
+    max-height: 550px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px dashed;
+}
+
+textarea.textEditorInDialog {
+    width: 100%;
+    min-height: 350px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ graph browser ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.graphBrowserSelect {
+    width: 40%;
+    max-width: 40%
+}
+
+.narrafirma-graphbrowser-heading {
+	margin: 8px 0 8px 0;
+}
+
+.singleChartStyle {
+    width: 700px;
+}
+
+.multipleChartStyle {
+    width: 200px;
+    float: left;
+}
+
+.noStyle {
+}
+
+/* chartEnclosureStyle = "width: 850px; height: 650px; margin: 5px auto 0px auto;"; */
+.chartEnclosure {
+    min-height: 200px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ story card printing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.storyCardForPrinting {
+     page-break-after: always;
+}

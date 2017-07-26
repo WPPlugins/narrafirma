@@ -1,0 +1,148 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Base ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+body { 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.05em;
+	text-align: left; 
+	background: white; 
+	margin: 0;
+}
+
+a:link {
+	color: #895717;
+}
+
+a:visited {
+	color: #3e3739;
+}
+
+a:hover {
+	color: #b5731e;
+}
+
+a:active {
+	color: #b5731e;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navigation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.header { 
+	background: #f4e0cc;
+	margin: 0px;
+	padding: 20px; 
+	border-bottom: 4px solid #cc6400;
+}
+	
+.narrafirma-name {
+	font-size: 1em;
+	color: #231f20;
+	font-weight: 700;
+	padding: 0 2em 0 0;
+}
+
+.breadcrumb {
+	font-size: 0.8em;
+}
+
+.page {
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Page styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.page-title {
+	font-size: 1.6em;
+	font-weight: 700;
+	padding: 12px 10px 12px 10px;
+}
+
+.heading {
+	font-size: 1.2em;
+	font-weight: 700;
+	padding: 8px 10px 6px 10px;
+}
+
+.text {
+	background: #f4e0cc;
+	padding: 4px 10px 4px 10px;
+	margin: 0px 10px 0px 10px;
+}
+
+.question {
+	background: #eac199;
+	font-style: italic;
+	padding: 9px 10px 8px 10px;
+	margin: 0px 10px 0px 10px;
+}
+
+.question-answer {
+	background: #f4e0cc;
+	padding: 4px 10px 4px 10px;
+	margin: 0px 10px 0px 10px;
+}
+
+.narrafirma-pni-phases-image {
+	float: right;
+}
+
+.book-quote {
+	margin: 20px;
+	padding: 20px;
+	background: #e4e4e4;
+	border: 1px solid #3e3739;
+}
+
+.book-quote-heading {
+	font-weight: 700;
+}
+
+.outcomes_table {
+	border-collapse: collapse;
+}
+
+.outcomes_table th {
+	padding: 0.4em;
+	border: 1px solid #3e3739;
+	background: #a7a5a5;
+}
+
+.outcomes_table td {
+	padding: 0.4em;
+	border: 1px solid #3e3739;
+	background: white;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ old, maybe not used ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.section {
+	font-style: italic;
+}
+#helpPageName {
+	font-weight: bold;
+	font: 180% verdana,tahoma;
+}
+
+.narrafirma-helpindex-backlink {
+	font: 60% verdana,tahoma;
+	margin-left: 4px;
+	margin-top: 10px;
+}
+
+.seeBookPages {
+	font: 80% verdana,tahoma;
+}
+
+.field {
+	font-style: normal;
+}
+
+.narrafirma-helpindex-sectionheader {
+	padding: 10px;
+	display: block;
+	border: 3px solid black;
+}
+
+a.narrafirma-helppageindex-panellink:link {
+	margin-left: 20px;
+}
+

@@ -1,0 +1,329 @@
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ general tags ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* NOTE: the mnemonic for margin or padding order is TRIBBLE: Top Right Bottom Left */
+
+html, body {
+	font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100%;
+    font-size: 1em;
+    overflow-y: scroll;
+}
+
+fieldset {
+	border: none;
+	margin-bottom: -0.6em;
+}
+
+hr {
+	display: none;
+	height: 6px;
+	color: #8db500;
+	background-color: #8db500;
+}
+
+legend {
+	margin-left: -2em;
+}
+
+textarea, input, select {
+	margin-top: 0.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+#surveyDiv {
+   padding: 10px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ story areas ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.narrafirma-survey-story {
+	margin: 0px 0px 30px 0px;
+}
+
+.narrafirma-survey-story-odd .narrafirma-survey-question-external {
+	background: #abb6ce;
+}
+
+.narrafirma-survey-prompt {
+    margin: 4px 10px 4px 10px;
+}
+
+.narrafirma-survey-question-external {
+    border-radius: 12px;
+    background: #d5dae6;
+    margin-bottom: 6px;
+    padding: 8px;
+}
+
+.narrafirma-survey-question-internal {
+	margin: 0 20px;
+}
+
+.narrafirma-survey-question-type-header {
+    font-weight: bold;
+    background: white;
+    margin-top: 10px;
+}
+
+.narrafirma-survey-question-type-label {
+    background: white;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ input areas ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.narrafirma-survey-question-type-textarea textarea {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    min-height: 10em;
+}
+
+.narrafirma-survey-question-type-text input {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.narrafirma-survey-question-type-slider table {
+    min-width: 100%;
+}
+
+.narrafirma-survey-question-type-slider .narrafirma-survey-question-internal {
+    text-align: center;
+}
+
+.narrafirma-survey-question-type-slider .narrafirma-survey-low {
+    text-align: right;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+.narrafirma-survey-question-type-slider .narrafirma-survey-slider {
+    /* text-align: center; */
+}
+
+.narrafirma-survey-question-type-slider .narrafirma-survey-high {
+    text-align: left;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+.narrafirma-survey-value {
+	text-align: left;
+	font-size: 75%;
+	margin-top: 8px;
+}
+
+.narrafirma-survey-does-not-apply {
+	margin-top: 12px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ tell another story, delete story ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.narrafirma-survey-tell-another-story-button-panel {
+    border-radius: 12px;
+	background: #b2c07f;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.narrafirma-survey-tell-another-story-button {
+    box-shadow: none;
+    border: none;
+	font-size: 0.8em;
+    border-radius: 12px;
+    background: #e0e6cc;
+    margin-left: 20px;
+    padding: 6px;
+}
+
+.narrafirma-survey-tell-another-story-button:hover {
+	background: #8db500;
+}
+	
+.narrafirma-survey-tell-another-story-button:active {
+	background: #658200;
+}
+
+.narrafirma-survey-delete-story-button {
+    box-shadow: none;
+    border: none;
+	font-size: 0.8em;
+    border-radius: 12px;
+    display: block;
+    background: #abb6ce;
+    margin: 10px 10px 0px auto;
+    float: right;
+    padding: 4px 10px;
+}
+
+.narrafirma-survey-delete-story-button:hover {
+	background: #3b5fab;
+	color: white;
+}
+	
+.narrafirma-survey-delete-story-button:active {
+	background: #2e4a85;
+	color: white;
+}
+
+.narrafirma-survey-story-odd .narrafirma-survey-delete-story-button {
+    background: #d5dae6;
+}
+
+.narrafirma-survey-story-odd .narrafirma-survey-delete-story-button:hover {
+	background: #3b5fab;
+	color: white;
+}
+	
+.narrafirma-survey-story-odd .narrafirma-survey-delete-story-button:active {
+	background: #2e4a85;
+	color: white;
+}
+
+.narrafirma-preview {
+	background: #eac199;
+	border: 2px solid #cc6400;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ submit survey ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.narrafirma-survey-submit-survey-button {
+    display: block;
+    box-shadow: none;
+    border: none;
+    text-shadow: -1px 1px #417cb8;
+    width: 300px;
+    font-size: 1.5em;
+    background: #3b5fab;
+    color: white;
+    border-radius: 12px;
+    margin: 10px auto 0px auto;
+	padding: 10px 20px;
+}
+
+.narrafirma-survey-submit-survey-button:hover {
+	background: #2e4a85;
+	text-shadow: -1px 1px #27496d;
+}
+
+.narrafirma-survey-submit-survey-button:active {
+	background: #243B6A; /* darker blue than in color scheme */
+	text-shadow: -1px 1px #193047;
+}
+
+.pleaseWaitOverlay {
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	width: 300px;
+	height: 70px;
+	margin: 30px auto 0px auto;
+	padding: 30px;
+    border: 4px solid #8db500;
+    border-radius: 12px;
+    background-image: url('../images/dojo-Standby-loading.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    z-index: 1001;
+}
+
+
+/* 
+   Next two rules are for the input range (slider) to be visible in Android.
+   Derived from: http://tiffanybbrown.com/2012/02/07/input-typerange-and-androids-stock-browser/
+*/
+
+input[type='range']{
+    /* background: #0c0; */
+    height:15px;
+}
+
+input[type='range']::-webkit-slider-thumb{
+    /* background:#f60; */
+    background: #9CF;
+    height:30px;
+    width:30px;
+    border-radius: 30px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ for printing survey ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.narrafirma-survey-print-title {
+	font-size: 1.5em;
+	margin: 0.5em 0 0.5em 12px
+}
+
+.narrafirma-survey-print-intro {
+	margin: 0 0 1em 12px;
+	font-style: italic;
+}
+
+.narrafirma-survey-print-please-select {
+	margin: 1.5em 0 0.5em 12px;
+	font-style: italic;
+}
+
+.narrafirma-survey-print-enter-response {
+	margin: 1.5em 12px 1.5em 12px;
+	padding: 0.5em 0.5em 8em 0.5em;
+	border: 1px solid black;
+	font-style: italic;
+}
+
+.narrafirma-survey-print-question-text {
+	margin: 1.5em 0 0.5em 12px;
+}
+
+.narrafirma-survey-print-instruction {
+	font-size: 0.75em;
+}
+
+.narrafirma-survey-print-radiobutton {
+	margin: 0 0 0.5em 24px;
+}
+
+.narrafirma-survey-print-checkbox {
+	margin: 0 0 0.5em 24px;
+}
+
+.narrafirma-survey-print-slider {
+	margin: 0 0 0.5em 24px;
+}
+
+.narrafirma-survey-print-blank-text-line {
+	margin: 1.5em 0 0.5em 24px;
+}
+
+.narrafirma-survey-print-textarea {
+	margin: 0.5em 24px 0.5em 24px;
+	padding: 4em;
+	border: 1px solid black;
+}
+
+.narrafirma-survey-print-end-text {
+	margin: 2em 0 2em 12px;
+	font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
